@@ -29,7 +29,7 @@ export default function LiveChat() {
               </div>
             </div>
             <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
-              Hi {CONTACT.name.split(' ')[0]}! 👋 How can the Stack Crafts team help you today?
+              Hi there! 👋 How can the Stack Crafts team help you today?
             </p>
             <div className="mt-3 flex gap-2">
               <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" className="btn-primary flex-1 !py-2 text-xs">
