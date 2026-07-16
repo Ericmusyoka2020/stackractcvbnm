@@ -70,7 +70,7 @@ export const PROJECTS = [
     tech: ['React', 'Node', 'PostgreSQL'],
     accent: 'from-yellow-400 to-blue-500',
     mock: 'dashboard',
-    image: '/AuroraFinanceDashboard.png',
+    image: 'AuroraFinanceDashboard.png',
   },
   {
     title: 'EduSphere LMS',
@@ -79,7 +79,7 @@ export const PROJECTS = [
     tech: ['Next.js', 'Supabase', 'Tailwind'],
     accent: 'from-amber-400 to-blue-600',
     mock: 'lms',
-    image: '/EduSphereLMS.png',
+    image: 'EduSphereLMS.png',
   },
   {
     title: 'Lumière Store',
@@ -88,7 +88,7 @@ export const PROJECTS = [
     tech: ['React', 'Stripe', 'M-Pesa'],
     accent: 'from-yellow-300 to-blue-500',
     mock: 'store',
-    image: '/LumièreStore.png',
+    image: 'LumièreStore.png',
   },
   {
     title: 'Nova Portfolio',
@@ -97,7 +97,7 @@ export const PROJECTS = [
     tech: ['Vite', 'GSAP', 'Tailwind'],
     accent: 'from-yellow-400 to-cyan-400',
     mock: 'portfolio',
-    image: '/NovaPortfolio.png',
+    image: 'NovaPortfolio.png',
   },
   {
     title: 'MedTrack HMS',
@@ -106,7 +106,7 @@ export const PROJECTS = [
     tech: ['React', 'Node', 'MongoDB'],
     accent: 'from-amber-400 to-blue-600',
     mock: 'hospital',
-    image: '/MedTrackHMS.png',
+    image: 'MedTrackHMS.png',
   },
   {
     title: 'Pulse Booking',
@@ -115,14 +115,14 @@ export const PROJECTS = [
     tech: ['Next.js', 'Twilio', 'Prisma'],
     accent: 'from-yellow-300 to-blue-500',
     mock: 'booking',
-    image: '/PulseBooking.png',
+    image: 'PulseBooking.png',
   },
 ]
 
 export const PRICING = [
   {
     name: 'Basic Website',
-    price: 'KES 25,000',
+    price: 'KES 15,000',
     period: 'one-time',
     desc: 'Perfect for a clean, professional online presence.',
     features: [
@@ -136,7 +136,7 @@ export const PRICING = [
   },
   {
     name: 'Business Website',
-    price: 'KES 65,000',
+    price: 'KES 30,000',
     period: 'one-time',
     desc: 'For growing brands that need more power and polish.',
     features: [
