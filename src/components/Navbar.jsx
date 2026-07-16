@@ -6,6 +6,13 @@ import Icon from './Icon'
 import Logo from './Logo'
 import ThemeToggle from './ThemeToggle'
 
+function scrollToHash(hash) {
+  const el = document.querySelector(hash)
+  if (!el) return
+  const top = el.getBoundingClientRect().top + window.scrollY - 80
+  window.scrollTo({ top, behavior: 'smooth' })
+}
+
 export default function Navbar() {
   const scrolled = useScrollProgress(40)
   const [open, setOpen] = useState(false)
@@ -15,12 +22,16 @@ export default function Navbar() {
     return () => (document.body.style.overflow = '')
   }, [open])
 
+  const handleNav = (e, href) => {
+    e.preventDefault()
+    setOpen(false)
+    scrollToHash(href)
+  }
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'glass-strong shadow-lg shadow-black/5'
-          : 'bg-transparent'
+        scrolled ? 'glass-strong shadow-lg shadow-black/5' : 'bg-transparent'
       }`}
     >
       <nav className="container-x flex h-16 items-center justify-between sm:h-20">
@@ -31,6 +42,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
+                onClick={(e) => handleNav(e, l.href)}
                 className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-brand-500 dark:text-slate-300 dark:hover:text-white"
               >
                 {l.label}
@@ -41,12 +53,18 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <a href="#contact" className="btn-primary hidden sm:inline-flex">
+          <a
+            href="#contact"
+            onClick={(e) => handleNav(e, '#contact')}
+            className="btn-primary hidden sm:inline-flex"
+          >
             Get Started
           </a>
           <button
+            type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Open menu"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
             className="btn-ghost h-10 w-10 !px-0 lg:hidden"
           >
             <Icon name={open ? 'close' : 'menu'} className="h-6 w-6" />
@@ -57,17 +75,18 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="glass-strong lg:hidden"
           >
             <ul className="container-x flex flex-col gap-1 pb-6 pt-2">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => handleNav(e, l.href)}
                     className="block rounded-xl px-4 py-3 text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5"
                   >
                     {l.label}
@@ -79,6 +98,7 @@ export default function Navbar() {
                   href={CONTACT.whatsapp}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={() => setOpen(false)}
                   className="btn-primary w-full"
                 >
                   WhatsApp Us
