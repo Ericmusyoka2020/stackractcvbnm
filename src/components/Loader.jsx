@@ -29,7 +29,7 @@ export default function Loader({ done }) {
             <div className="absolute inset-0 -rotate-180">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 shadow-glow ring-2 ring-brand-400/40">
                 <img
-                  src="/pic.png"
+                  src="pic.png"
                   alt="Stack Crafts Studio"
                   className="h-10 w-10 rounded-xl object-contain"
                   onError={(e) => {

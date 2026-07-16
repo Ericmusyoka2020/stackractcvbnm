@@ -1,4 +1,4 @@
-const LOGO_SRC = '/logo.png'
+const LOGO_SRC = 'logo.png'
 
 export default function Logo({ className = '' }) {
   return (
