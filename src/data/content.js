@@ -122,7 +122,7 @@ export const PROJECTS = [
 export const PRICING = [
   {
     name: 'Basic Website',
-    price: 'KES 15,000',
+    price: 'KES 10,000',
     period: 'one-time',
     desc: 'Perfect for a clean, professional online presence.',
     features: [
@@ -136,7 +136,7 @@ export const PRICING = [
   },
   {
     name: 'Business Website',
-    price: 'KES 30,000',
+    price: 'KES 25,000',
     period: 'one-time',
     desc: 'For growing brands that need more power and polish.',
     features: [
