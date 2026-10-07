@@ -1,6 +1,6 @@
 export const CONTACT = {
-  phone: '0710911645 or 0756225185',
-  phoneHref: 'tel:+254710911645 or 0756225185',
+  phone: '0710911645',
+  phoneHref: 'tel:+254710911645',
   whatsapp: 'https://wa.me/254710911645',
   email: 'stackcraftsstudio@gmail.com',
   name: 'Eric Thyaka',
