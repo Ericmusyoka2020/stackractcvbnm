@@ -227,8 +227,8 @@ export const FAQ = [
 ]
 
 export const SOCIALS = [
-  { label: 'Twitter / X', href: 'https://twitter.com', icon: 'twitter' },
-  { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'linkedin' },
-  { label: 'Instagram', href: 'https://instagram.com', icon: 'instagram' },
+  { label: 'Twitter / X', href: 'https://x.com/EricMusyok17', icon: 'twitter' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/thyaka-eric-05742137a?utm_source=share_via&utm_content=profile&utm_medium=member_android', icon: 'linkedin' },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61593466963585', icon: 'facebook' },
 
 ]
